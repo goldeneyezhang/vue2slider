@@ -3,7 +3,6 @@
   <div class="section">
       <div class="section">
           <announcement :announcement="announcement"></announcement>
-          
     </div>
     <div class="section">
         <slider :slides="slides"></slider>
@@ -27,8 +26,7 @@
         data(){
             return {
             announcement:'',
-            slides:[
-                ],
+            slides:[],
             lastUpdated:[
             ],
             recommended:[
@@ -46,8 +44,7 @@
             }
         },
         created(){
-            this.$http.get('../src/fixtures/home/home.json').then((res)=>{
-                console.log(res.body.slides);    
+            this.$http.get('../src/fixtures/home/home.json').then((res)=>{ 
                 for (var prop in res.body) {
                     this[prop]=res.body[prop]
                 }

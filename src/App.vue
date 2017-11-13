@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <tabs></tabs>
   <div class="content">
       <!--用router-view渲染视图-->
       <router-view></router-view>
