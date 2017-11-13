@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
+import VueResource from 'vue-resource'
 //引入页面
 import Home from './Home.vue'
 import Category from './Category.vue'
@@ -10,6 +11,8 @@ import Main from './Main.vue'
 
 //使用路由实例插件
 Vue.use(VueRouter)
+
+Vue.use(VueResource)
 const router=new VueRouter({
   mode:'history',
   base:__dirname,
@@ -32,5 +35,9 @@ const router=new VueRouter({
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  render: h => h(App),
+  http:{
+    root:'/api',//指定资源跟目录
+    headers:{}//添加自定义的http头变量
+  }
 })
