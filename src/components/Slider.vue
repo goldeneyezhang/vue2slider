@@ -26,5 +26,30 @@
     </div>
 </template>
 <script>
-    import Swiper from 'swiper'
+    import Swiper from 'swiper' //引入Swiper库
+    import 'swiper/dist/css/swiper.css' //引入Swiper所需要的样式
+
+    export default {
+        //不要选用created钩子而应该采用mounted
+        //否则Swiper不能生效，因为created调用时元素还没挂载到DOM上
+        mounted(){
+              console.log('mounted', this);
+            new Swiper(this.$refs.slider,{
+                pagination:this.$refs.pagination,
+                paginationClickable:true,
+                spaceBetween:30,
+                centeredSlides:true,
+                autoplay:2500,
+                autoplayDisableOnInteraction:false
+            });
+        },
+        data(){
+            return {
+                slides:[
+                    {id:1,img_url:'./fixtures/sliders/t1.svg'},
+                    {id:2,img_url:'./fixtures/sliders/t2.svg'}
+                ]
+            }
+        }
+    }
 </script>
