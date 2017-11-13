@@ -3,15 +3,10 @@
         <div>
             <!--热门推荐-->
             <div class="swiper-container" ref="slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./fixture/sliders/t1.svg"/>
-                    </div>
-                </div>
-                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./fixture/sliders/t2.svg"/>
-                    </div>
+                <div class="swiper-wrapper" v-for="slide in slides">
+                  <router-link class="swiper-slide" tag="div" :to="name:'BookDetial',params:{id:slide.id}}"
+                  <img :src="slide.img_url"/>
+                  </router-link>
                 </div>
                 <div class="swiper-pagination" ref="pagination">
             </div>
