@@ -37,14 +37,6 @@
                 autoplay:2500,
                 autoplayDisableOnInteraction:false
             });
-        },
-        data(){
-            return {
-                slides:[
-                    {id:1,img_url:'./fixtures/sliders/t1.svg'},
-                    {id:2,img_url:'./fixtures/sliders/t2.svg'}
-                ]
-            }
         }
     }
 </script>

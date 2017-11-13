@@ -1,6 +1,7 @@
 <template>
   <div id="home">
-<div class="section">
+  <div class="section">
+  <div class="section">
     <book-list :books="lastUpdated" heading="最新更新">
     </book-list>
 </div>
@@ -9,9 +10,11 @@
     </book-list>
 </div>
 </div>
+</div>
 </template>
 <script>
     import BookList from './components/BookList.vue'
+    import Announcement from './components/Announcement.vue'
     export default{
         data(){
             return {
@@ -28,8 +31,19 @@
                     "img_url":"https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=ddd05cfe741ed21b79c929e39555baf9/14ce36d3d539b60060b7c2bbe050352ac65cb745.jpg"
                 }
             ],
-            recommended:[]
+            recommended:[
+                {
+                     "id":1,
+                    "title":"大数据架构详解",
+                    "authors":["Edward Zaccaro","Daniel Zaccaro"],
+                    "img_url":"https://img3.doubanio.com/lpic/s29120064.jpg"
+                }
+            ]
             }
+        },
+        components:{
+            BookList,
+            Announcement
         }
     }
 </script>
