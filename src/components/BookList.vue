@@ -17,3 +17,16 @@
     </div>
 </div>
 </template>
+<script>
+    export default{
+        props:[
+            'heading',//标题
+            'books' //图书对象数组
+        ],
+        filters:{
+            join(args){
+                return args.join(',')
+            }
+        }
+    }
+</script>
