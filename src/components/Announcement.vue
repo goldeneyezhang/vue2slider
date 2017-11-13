@@ -6,7 +6,8 @@
 </template>
 <script>
     export default{
-        data(){
-        }
+       props:[
+            'announcement'
+        ],
     }
 </script>

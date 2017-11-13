@@ -37,6 +37,9 @@
                 autoplay:2500,
                 autoplayDisableOnInteraction:false
             });
-        }
+        },
+        props:[
+            'sliders'
+        ]
     }
 </script>
