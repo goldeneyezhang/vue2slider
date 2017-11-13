@@ -47,7 +47,7 @@
         },
         created(){
             this.$http.get('../src/fixtures/home/home.json').then((res)=>{
-                console.log(res.body);    
+                console.log(res.body.slides);    
                 for (var prop in res.body) {
                     this[prop]=res.body[prop]
                 }

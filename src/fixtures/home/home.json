@@ -3,11 +3,11 @@
   "slides": [
     {
       "id": 7,
-      "img_url": "t1.svg"
+      "img_url": "../src/fixtures/sliders/t1.svg"
     },
     {
       "id": 8,
-      "img_url": "t2.svg"
+      "img_url": "../src/fixtures/sliders/t2.svg"
     }
   ],
   "lastUpdated": [
