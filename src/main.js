@@ -6,6 +6,7 @@ import Home from './Home.vue'
 import Category from './Category.vue'
 import Me from './Me.vue'
 import Cart from './ShoppingCart.vue'
+import Main from './Main.vue'
 
 //使用路由实例插件
 Vue.use(VueRouter)
