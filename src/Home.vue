@@ -1,6 +1,12 @@
 <template>
   <div id="home">
   <div class="section">
+      <modal-dialog>
+          <div slot="header">此处是header插槽的内容</div>
+          <div>这个DIV将自动默认插槽的内容</div>
+      </modal-dialog>
+  </div>
+  <div class="section">
       <div class="section">
           <announcement :announcement="announcement"></announcement>
     </div>
@@ -22,6 +28,7 @@
     import BookList from './components/BookList.vue'
     import Announcement from './components/Announcement.vue'
     import Slider from './components/Slider.vue'
+    import ModalDialog from "./components/Dialog.vue"
     export default{
         data(){
             return {
@@ -36,7 +43,8 @@
         components:{
             BookList,
             Announcement,
-            Slider
+            Slider,
+            ModalDialog
         },
         methods:{
             preview(book){
