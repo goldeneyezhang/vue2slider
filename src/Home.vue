@@ -1,9 +1,16 @@
 <template>
   <div id="home">
   <div class="section">
-      <modal-dialog>
-          <div slot="header">此处是header插槽的内容</div>
-          <div>这个DIV将自动默认插槽的内容</div>
+      <modal-dialog ref="dialog" @dialogClose="selected=undefined">
+          <div slot="header">
+              <div class="dismiss" @click.prevent="$refs.dialog.close()"></div>
+            </div>
+         <div v-if="selected">
+              <img :src="selected.img_url">
+          </div>
+         <div v-if="selected">
+              {{selected.title}}
+          </div>
       </modal-dialog>
   </div>
   <div class="section">
@@ -29,6 +36,11 @@
     import Announcement from './components/Announcement.vue'
     import Slider from './components/Slider.vue'
     import ModalDialog from "./components/Dialog.vue"
+    import faker from "./fixtures/faker.js"
+
+    //判断当前环境是否是开发环境
+    const debug=process.env.Node_ENV!=='production'
+
     export default{
         data(){
             return {
@@ -37,7 +49,8 @@
             lastUpdated:[
             ],
             recommended:[
-            ]
+            ],
+            selected:undefined
             }
         },
         components:{
@@ -48,17 +61,26 @@
         },
         methods:{
             preview(book){
-                alert("显示图书详情")
+               this.selected=book
+               this.$refs.dialog.open()
             }
         },
         created(){
-            this.$http.get('../src/fixtures/home/home.json').then((res)=>{ 
+            if(debug){
+                const fakeData=faker.getHomeData()
+                for (var prop in fakeData){
+                    this[prop]=fakeData[prop]
+                }
+            }
+            else{
+            this.$http.get('../src/fixtures/home.json').then((res)=>{ 
                 for (var prop in res.body) {
                     this[prop]=res.body[prop]
                 }
             },(error)=>{
                 console.log('获取数据失败:${error}')
             })
+            }
         }
     }
 </script>

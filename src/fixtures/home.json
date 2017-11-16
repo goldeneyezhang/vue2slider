@@ -3,11 +3,11 @@
   "slides": [
     {
       "id": 7,
-      "img_url": "../src/fixtures/sliders/t1.svg"
+      "img_url": "t1.svg"
     },
     {
       "id": 8,
-      "img_url": "../src/fixtures/sliders/t2.svg"
+      "img_url": "t2.svg"
     }
   ],
   "lastUpdated": [
@@ -17,7 +17,7 @@
       "authors": [
         "Edward Zaccaro, Daniel Zaccaro"
       ],
-      "img_url": "../src/fixtures/covers/1.svg"
+      "img_url": "1.svg"
     },
     {
       "id": 2,
@@ -25,7 +25,7 @@
       "authors": [
         "顾浩鑫"
       ],
-      "img_url": "../src/fixtures/covers/2.svg"
+      "img_url": "2.svg"
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       "authors": [
         "老夏"
       ],
-      "img_url": "../src/fixtures/covers/3.svg"
+      "img_url": "3.svg"
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
         "朱洁",
         "罗华霖"
       ],
-      "img_url": "../src/fixtures/covers/4.svg"
+      "img_url": "4.svg"
     },
     {
       "id": 5,
@@ -50,7 +50,7 @@
       "authors": [
         "杜亦舒"
       ],
-      "img_url": "../src/fixtures/covers/5.svg"
+      "img_url": "5.svg"
     }
    
   ],
@@ -65,7 +65,7 @@
         "崔秀龙",
         "闫健勇"
       ],
-      "img_url": "../src/fixtures/covers/6.svg"
+      "img_url": "6.svg"
     }
   ]
 }
